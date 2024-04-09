@@ -24,6 +24,8 @@ write the styles into -> index.html
 ## Technology Stack  
 - ![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python)
 - ![Django](https://img.shields.io/badge/-Django-orange?style=flat-square&logo=django)
+- ![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5)
+- ![CSS](https://img.shields.io/badge/-CSS-blueviolet?style=flat-square&logo=css3)
 
 ## Screenshots  
 <img src="screenshots/scr1.png" alt="Screenshot" width="400" height="200">  
