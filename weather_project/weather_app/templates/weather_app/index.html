@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #280032;
+          text-align: center;
+          padding: 50px;
+          color: white
+        }
+
+        .city-container {
+          font-size: 20px;
+        }
+
+        form {
+          margin: 20px 0;
+        }
+
+        input[type="text"] {
+          padding: 10px;
+          border: 2px solid #ccc;
+          border-radius: 10px;
+        }
+
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 24px;
+          border: none;
+          border-radius: 12px;
+          cursor: pointer;
+        }
+
+        .forecast-container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .forecast {
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          margin: 10px;
+          width: calc(100% / 5 - 20px);
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 767px) {
+          .forecast {
+            width: calc(50% - 20px);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .forecast {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="city1" placeholder="City 1">
+        <input type="text" name="city2" placeholder="City 2">
+        <button type="submit">Compare weather</button>
+    </form>
+
+    <div class="comparison-container">
+        {% if weather_data1 %}
+            <div class="city-container">
+                {% include 'weather_app/city_weather.html' with weather_data=weather_data1 %}
+            </div>
+        {% endif %}
+        {% if weather_data2 %}
+            <div class="city-container">
+                {% include 'weather_app/city_weather.html' with weather_data=weather_data2 %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
