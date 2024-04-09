@@ -5,8 +5,8 @@ It's my first project using Django
 ## Description
 At first I made an environment for django  
 ->  
-django-admin startproject <name project>  
-python manage.py startapp <name app>   
+django-admin startproject `name project`   
+python manage.py startapp `name app`  
 <-  
 Then I take the api to get weather information  
 Work in the file views.py: get information using requests  
@@ -16,7 +16,7 @@ Create index.html and city_weather.html to display infotmation
 write the styles into -> index.html  
   
 ## To run it  
-- git clone <url repository>
+- git clone `url repository`  
 - pip install django requests
 - cd weather_project
 - python manage.py runserver (and click to url (ip-adress))
