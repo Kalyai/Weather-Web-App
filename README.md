@@ -2,10 +2,10 @@
 **Author: Sergei Kalyaev**  
 
 ## Описание
-Создаем среду для разработки на Django
-В GET запросе получал информацию о городе/городах
+Создаем среду для разработки на Django  
+В GET запросе получал информацию о городе/городах  
 Для POST информации о погоде, я использовал API с [сайта](https://api.openweathermap.org)  
-Дальше отображение информации в index.html и city_weather.html
+Дальше отображение информации в index.html и city_weather.html  
   
 ## Как запустить
 - git clone `url repository`  
